@@ -531,7 +531,13 @@ static void ShowSearchReportsMenu()
     } while(option != 0);
 }
 }
-static void SearchBook() {}
+static void SearchBook() 
+{ 
+     Console.Clear();
+    Console.WriteLine("===== BUSCAR LIBRO =====");
+    Console.WriteLine("Buscar libro por título, autor, ID o categoría.");
+    Console.ReadKey();
+}
 
 static void SearchUser() {}
 
