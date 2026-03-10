@@ -96,5 +96,19 @@ static void ShowPersistenceMenu()
     Console.WriteLine("Entrando a Guardar / Cargar datos...");
     Console.ReadKey();
 }
-    static void ConfirmExitAndSave() {}
+    static void ConfirmExitAndSave()
+{
+    Console.Clear();
+    Console.WriteLine("¿Desea guardar antes de salir? (S/N)");
+
+    string response = Console.ReadLine() ?? "";
+
+    if(response.ToUpper() == "S")
+    {
+        Console.WriteLine("Guardando datos...");
+    }
+
+    Console.WriteLine("Saliendo del sistema...");
+    Console.ReadKey();
+}
 }
