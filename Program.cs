@@ -294,7 +294,13 @@ static void ListUsers()
     Console.WriteLine("Mostrando todos los usuarios registrados.");
     Console.ReadKey();
     }
-static void ViewUserDetail() {}
+static void ViewUserDetail()
+    {
+    Console.Clear();
+    Console.WriteLine("===== DETALLE DEL USUARIO =====");
+    Console.WriteLine("Mostrando información del usuario por ID o documento.");
+    Console.ReadKey();
+    }
 static void UpdateUserMenu() {}
 static void DeleteUser() {}
 
