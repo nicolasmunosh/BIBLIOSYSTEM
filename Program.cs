@@ -62,10 +62,39 @@ static void ShowMainMenu()
     } while (option != 6);
 }
 
-    static void ShowBooksMenu() {}
-    static void ShowUsersMenu() {}
-    static void ShowLoansMenu() {}
-    static void ShowSearchReportsMenu() {}
-    static void ShowPersistenceMenu() {}
+static void ShowBooksMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Entrando al módulo de Libros...");
+    Console.ReadKey();
+}
+
+static void ShowUsersMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Entrando al módulo de Usuarios...");
+    Console.ReadKey();
+}
+
+static void ShowLoansMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Entrando al módulo de Préstamos...");
+    Console.ReadKey();
+}
+
+static void ShowSearchReportsMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Entrando a Búsquedas y Reportes...");
+    Console.ReadKey();
+}
+
+static void ShowPersistenceMenu()
+{
+    Console.Clear();
+    Console.WriteLine("Entrando a Guardar / Cargar datos...");
+    Console.ReadKey();
+}
     static void ConfirmExitAndSave() {}
 }
