@@ -149,11 +149,23 @@ static void ListBooksMenu()
 
     } while(option != 0);
 }
-static void ListBooksAll() {}
+static void ListBooksAll()
+{
+    Console.WriteLine("Mostrando todos los libros...");
+    Console.ReadKey();
+}
 
-static void ListBooksAvailable() {}
+static void ListBooksAvailable()
+{
+    Console.WriteLine("Mostrando libros disponibles...");
+    Console.ReadKey();
+}
 
-static void ListBooksBorrowed() {}
+static void ListBooksBorrowed()
+{
+    Console.WriteLine("Mostrando libros prestados...");
+    Console.ReadKey();
+}
 
 static void ViewBookDetail() {}
 
