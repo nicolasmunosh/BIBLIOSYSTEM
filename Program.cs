@@ -227,7 +227,13 @@ static void EditBookYearCategory()
     Console.ReadKey();
 }
 
-static void DeleteBook() {}
+static void DeleteBook()
+    {
+    Console.Clear();
+    Console.WriteLine("Eliminar libro seleccionado.");
+    Console.WriteLine("Validar no permitir si el libro está prestado.");
+    Console.ReadKey();
+    }
 
 static void ShowUsersMenu()
 {
