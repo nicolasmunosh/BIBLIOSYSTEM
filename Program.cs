@@ -175,7 +175,43 @@ static void ViewBookDetail()
     Console.ReadKey();
     }
 
-static void UpdateBookMenu() {}
+static void UpdateBookMenu()
+    {
+  int option;
+    
+    do
+    {
+        Console.Clear();
+        Console.WriteLine("===== ACTUALIZAR LIBRO =====");
+        Console.WriteLine("1. Editar título");
+        Console.WriteLine("2. Editar autor");
+        Console.WriteLine("3. Editar año / categoría");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                EditBookTitle();
+                break;
+
+            case 2:
+                EditBookAuthor();
+                break;
+
+            case 3:
+                EditBookYearCategory();
+                break;
+        }
+
+    } while(option != 0);
+    }
+    static void EditBookTitle() {}
+static void EditBookAuthor() {}
+static void EditBookYearCategory() {}
 
 static void DeleteBook() {}
 
