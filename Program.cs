@@ -336,9 +336,23 @@ static void UpdateUserMenu()
 
     } while(option != 0);
     }
-static void EditUserName() {}
-static void EditUserContact() {}
-static void ToggleUserActiveStatus() {}
+static void EditUserName()
+{
+    Console.WriteLine("Editar nombre del usuario...");
+    Console.ReadKey();
+}
+
+static void EditUserContact()
+{
+    Console.WriteLine("Editar contacto del usuario...");
+    Console.ReadKey();
+}
+
+static void ToggleUserActiveStatus()
+{
+    Console.WriteLine("Activar o desactivar usuario...");
+    Console.ReadKey();
+}
 static void DeleteUser() {}
 
 static void ShowLoansMenu()
