@@ -479,7 +479,13 @@ static void ViewLoanDetail()
     Console.ReadKey();
     }
 
-static void RegisterReturn() {}
+static void RegisterReturn()
+    {
+    Console.Clear();
+    Console.WriteLine("Registrar devolución del libro.");
+    Console.WriteLine("El libro vuelve a estar disponible.");
+    Console.ReadKey();
+    }
 
 static void DeleteLoan() {}
 
