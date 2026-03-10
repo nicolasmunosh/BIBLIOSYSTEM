@@ -7,7 +7,7 @@ class Program
         ShowMainMenu();
     }
 
-    static void ShowMainMenu()
+static void ShowMainMenu()
 {
     Console.WriteLine("===== SISTEMA BIBLIOTECA =====");
     Console.WriteLine("1. Libros");
@@ -21,6 +21,37 @@ class Program
 
     int option;
     int.TryParse(Console.ReadLine(), out option);
+
+    switch(option)
+    {
+        case 1:
+            ShowBooksMenu();
+            break;
+
+        case 2:
+            ShowUsersMenu();
+            break;
+
+        case 3:
+            ShowLoansMenu();
+            break;
+
+        case 4:
+            ShowSearchReportsMenu();
+            break;
+
+        case 5:
+            ShowPersistenceMenu();
+            break;
+
+        case 6:
+            ConfirmExitAndSave();
+            break;
+
+        default:
+            Console.WriteLine("Opción inválida");
+            break;
+    }
 }
 
     static void ShowBooksMenu() {}
