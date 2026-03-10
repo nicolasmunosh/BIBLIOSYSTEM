@@ -547,7 +547,50 @@ static void SearchUser()
     Console.ReadKey();
     }
 
-static void ShowReportsMenu() {}
+static void ShowReportsMenu()
+    {
+     int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== REPORTES =====");
+        Console.WriteLine("1. Préstamos por usuario");
+        Console.WriteLine("2. Préstamos por libro");
+        Console.WriteLine("3. Préstamos vencidos");
+        Console.WriteLine("4. Resumen general");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                ReportByUser();
+                break;
+
+            case 2:
+                ReportByBook();
+                break;
+
+            case 3:
+                ReportOverdue();
+                break;
+
+            case 4:
+                ReportSummary();
+                break;
+        }
+
+    } while(option != 0);
+    }
+static void ReportByUser() {}
+static void ReportByBook() {}
+static void ReportOverdue() {}
+static void ReportSummary() {}
 static void ShowPersistenceMenu()
 {
     Console.Clear();
