@@ -487,7 +487,13 @@ static void RegisterReturn()
     Console.ReadKey();
     }
 
-static void DeleteLoan() {}
+static void DeleteLoan()
+    {
+    Console.Clear();
+    Console.WriteLine("Eliminar préstamo seleccionado.");
+    Console.WriteLine("Regla sugerida: solo permitir si está cerrado.");
+    Console.ReadKey();
+    }
 
 static void ShowSearchReportsMenu()
 {
