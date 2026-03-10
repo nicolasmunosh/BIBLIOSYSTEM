@@ -280,7 +280,13 @@ static void ShowUsersMenu()
 
     } while(option != 0);
 }
-static void RegisterUser() {}
+static void RegisterUser()
+    {
+    Console.Clear();
+    Console.WriteLine("===== REGISTRAR USUARIO =====");
+    Console.WriteLine("Función para registrar un nuevo usuario.");
+    Console.ReadKey();
+    }
 static void ListUsers() {}
 static void ViewUserDetail() {}
 static void UpdateUserMenu() {}
