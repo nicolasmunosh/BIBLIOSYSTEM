@@ -587,10 +587,29 @@ static void ShowReportsMenu()
 
     } while(option != 0);
     }
-static void ReportByUser() {}
-static void ReportByBook() {}
-static void ReportOverdue() {}
-static void ReportSummary() {}
+static void ReportByUser()
+{
+    Console.WriteLine("Reporte de préstamos por usuario.");
+    Console.ReadKey();
+}
+
+static void ReportByBook()
+{
+    Console.WriteLine("Reporte de préstamos por libro.");
+    Console.ReadKey();
+}
+
+static void ReportOverdue()
+{
+    Console.WriteLine("Reporte de préstamos vencidos.");
+    Console.ReadKey();
+}
+
+static void ReportSummary()
+{
+    Console.WriteLine("Resumen general del sistema.");
+    Console.ReadKey();
+}
 static void ShowPersistenceMenu()
 {
     Console.Clear();
