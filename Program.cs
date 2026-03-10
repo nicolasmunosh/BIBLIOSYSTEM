@@ -417,7 +417,45 @@ static void CreateLoan()
     Console.ReadKey();
     }
 
-static void ListLoansMenu() {}
+static void ListLoansMenu()
+    {
+      int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== LISTAR PRÉSTAMOS =====");
+        Console.WriteLine("1. Todos");
+        Console.WriteLine("2. Activos");
+        Console.WriteLine("3. Cerrados");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                ListLoansAll();
+                break;
+
+            case 2:
+                ListLoansActive();
+                break;
+
+            case 3:
+                ListLoansClosed();
+                break;
+        }
+
+    } while(option != 0);
+}
+
+static void ListLoansAll() {}
+static void ListLoansActive() {}
+static void ListLoansClosed() {}
 
 static void ViewLoanDetail() {}
 
