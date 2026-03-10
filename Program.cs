@@ -497,11 +497,45 @@ static void DeleteLoan()
 
 static void ShowSearchReportsMenu()
 {
-    Console.Clear();
-    Console.WriteLine("Entrando a Búsquedas y Reportes...");
-    Console.ReadKey();
-}
+    {
+    int option;
 
+    do
+    {
+        Console.Clear();
+        Console.WriteLine("===== BÚSQUEDAS Y REPORTES =====");
+        Console.WriteLine("1. Buscar libro");
+        Console.WriteLine("2. Buscar usuario");
+        Console.WriteLine("3. Reportes");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                SearchBook();
+                break;
+
+            case 2:
+                SearchUser();
+                break;
+
+            case 3:
+                ShowReportsMenu();
+                break;
+        }
+
+    } while(option != 0);
+}
+}
+static void SearchBook() {}
+
+static void SearchUser() {}
+
+static void ShowReportsMenu() {}
 static void ShowPersistenceMenu()
 {
     Console.Clear();
