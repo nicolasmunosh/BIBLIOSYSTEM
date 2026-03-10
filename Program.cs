@@ -287,7 +287,13 @@ static void RegisterUser()
     Console.WriteLine("Función para registrar un nuevo usuario.");
     Console.ReadKey();
     }
-static void ListUsers() {}
+static void ListUsers()
+    {
+    Console.Clear();
+    Console.WriteLine("===== LISTAR USUARIOS =====");
+    Console.WriteLine("Mostrando todos los usuarios registrados.");
+    Console.ReadKey();
+    }
 static void ViewUserDetail() {}
 static void UpdateUserMenu() {}
 static void DeleteUser() {}
