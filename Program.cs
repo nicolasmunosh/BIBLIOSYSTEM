@@ -353,7 +353,13 @@ static void ToggleUserActiveStatus()
     Console.WriteLine("Activar o desactivar usuario...");
     Console.ReadKey();
 }
-static void DeleteUser() {}
+static void DeleteUser()
+    {
+    Console.Clear();
+    Console.WriteLine("Eliminar usuario seleccionado.");
+    Console.WriteLine("Validar no permitir si tiene préstamos activos.");
+    Console.ReadKey();
+    }
 
 static void ShowLoansMenu()
 {
