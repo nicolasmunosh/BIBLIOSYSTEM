@@ -114,7 +114,46 @@ static void ShowBooksMenu()
     Console.ReadKey();
     }
 
-static void ListBooksMenu() {}
+static void ListBooksMenu()
+{
+    int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== LISTAR LIBROS =====");
+        Console.WriteLine("1. Listar todos");
+        Console.WriteLine("2. Listar disponibles");
+        Console.WriteLine("3. Listar prestados");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                ListBooksAll();
+                break;
+
+            case 2:
+                ListBooksAvailable();
+                break;
+
+            case 3:
+                ListBooksBorrowed();
+                break;
+        }
+
+    } while(option != 0);
+}
+static void ListBooksAll() {}
+
+static void ListBooksAvailable() {}
+
+static void ListBooksBorrowed() {}
 
 static void ViewBookDetail() {}
 
