@@ -453,9 +453,23 @@ static void ListLoansMenu()
     } while(option != 0);
 }
 
-static void ListLoansAll() {}
-static void ListLoansActive() {}
-static void ListLoansClosed() {}
+static void ListLoansAll()
+{
+    Console.WriteLine("Mostrando todos los préstamos...");
+    Console.ReadKey();
+}
+
+static void ListLoansActive()
+{
+    Console.WriteLine("Mostrando préstamos activos...");
+    Console.ReadKey();
+}
+
+static void ListLoansClosed()
+{
+    Console.WriteLine("Mostrando préstamos cerrados...");
+    Console.ReadKey();
+}
 
 static void ViewLoanDetail() {}
 
