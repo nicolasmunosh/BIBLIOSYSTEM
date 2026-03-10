@@ -471,7 +471,13 @@ static void ListLoansClosed()
     Console.ReadKey();
 }
 
-static void ViewLoanDetail() {}
+static void ViewLoanDetail()
+    {
+    Console.Clear();
+    Console.WriteLine("===== DETALLE DEL PRÉSTAMO =====");
+    Console.WriteLine("Mostrando información del préstamo por ID.");
+    Console.ReadKey();
+    }
 
 static void RegisterReturn() {}
 
