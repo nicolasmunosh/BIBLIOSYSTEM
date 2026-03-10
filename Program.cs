@@ -539,7 +539,13 @@ static void SearchBook()
     Console.ReadKey();
 }
 
-static void SearchUser() {}
+static void SearchUser()
+    {
+    Console.Clear();
+    Console.WriteLine("===== BUSCAR USUARIO =====");
+    Console.WriteLine("Buscar usuario por nombre o ID.");
+    Console.ReadKey();
+    }
 
 static void ShowReportsMenu() {}
 static void ShowPersistenceMenu()
