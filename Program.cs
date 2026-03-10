@@ -167,7 +167,13 @@ static void ListBooksBorrowed()
     Console.ReadKey();
 }
 
-static void ViewBookDetail() {}
+static void ViewBookDetail()
+    {
+    Console.Clear();
+    Console.WriteLine("===== DETALLE DEL LIBRO =====");
+    Console.WriteLine("Mostrando información del libro por ID o ISBN.");
+    Console.ReadKey();
+    }
 
 static void UpdateBookMenu() {}
 
