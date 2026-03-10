@@ -106,7 +106,13 @@ static void ShowBooksMenu()
         }
 
     } while(option != 0);
-}static void RegisterBook() {}
+}static void RegisterBook()
+    {
+    Console.Clear();
+    Console.WriteLine("===== REGISTRAR LIBRO =====");
+    Console.WriteLine("Función para registrar un nuevo libro.");
+    Console.ReadKey();
+    }
 
 static void ListBooksMenu() {}
 
