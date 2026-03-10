@@ -237,10 +237,54 @@ static void DeleteBook()
 
 static void ShowUsersMenu()
 {
-    Console.Clear();
-    Console.WriteLine("Entrando al módulo de Usuarios...");
-    Console.ReadKey();
+        int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== MENÚ USUARIOS =====");
+        Console.WriteLine("1. Registrar usuario");
+        Console.WriteLine("2. Listar usuarios");
+        Console.WriteLine("3. Ver detalle del usuario");
+        Console.WriteLine("4. Actualizar usuario");
+        Console.WriteLine("5. Eliminar usuario");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                RegisterUser();
+                break;
+
+            case 2:
+                ListUsers();
+                break;
+
+            case 3:
+                ViewUserDetail();
+                break;
+
+            case 4:
+                UpdateUserMenu();
+                break;
+
+            case 5:
+                DeleteUser();
+                break;
+        }
+
+    } while(option != 0);
 }
+static void RegisterUser() {}
+static void ListUsers() {}
+static void ViewUserDetail() {}
+static void UpdateUserMenu() {}
+static void DeleteUser() {}
 
 static void ShowLoansMenu()
 {
