@@ -209,9 +209,23 @@ static void UpdateBookMenu()
 
     } while(option != 0);
     }
-    static void EditBookTitle() {}
-static void EditBookAuthor() {}
-static void EditBookYearCategory() {}
+static void EditBookTitle()
+{
+    Console.WriteLine("Editar título del libro...");
+    Console.ReadKey();
+}
+
+static void EditBookAuthor()
+{
+    Console.WriteLine("Editar autor del libro...");
+    Console.ReadKey();
+}
+
+static void EditBookYearCategory()
+{
+    Console.WriteLine("Editar año o categoría del libro...");
+    Console.ReadKey();
+}
 
 static void DeleteBook() {}
 
