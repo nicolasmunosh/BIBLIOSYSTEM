@@ -406,7 +406,16 @@ static void ShowLoansMenu()
 
     } while(option != 0);
 }
-static void CreateLoan() {}
+static void CreateLoan()
+    {
+    Console.Clear();
+    Console.WriteLine("===== CREAR PRÉSTAMO =====");
+    Console.WriteLine("Validaciones sugeridas:");
+    Console.WriteLine("- Usuario debe existir");
+    Console.WriteLine("- Usuario debe estar activo");
+    Console.WriteLine("- Libro debe estar disponible");
+    Console.ReadKey();
+    }
 
 static void ListLoansMenu() {}
 
