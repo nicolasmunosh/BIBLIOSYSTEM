@@ -301,7 +301,44 @@ static void ViewUserDetail()
     Console.WriteLine("Mostrando información del usuario por ID o documento.");
     Console.ReadKey();
     }
-static void UpdateUserMenu() {}
+static void UpdateUserMenu()
+    {
+       int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== ACTUALIZAR USUARIO =====");
+        Console.WriteLine("1. Editar nombre");
+        Console.WriteLine("2. Editar contacto");
+        Console.WriteLine("3. Activar / Desactivar usuario");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                EditUserName();
+                break;
+
+            case 2:
+                EditUserContact();
+                break;
+
+            case 3:
+                ToggleUserActiveStatus();
+                break;
+        }
+
+    } while(option != 0);
+    }
+static void EditUserName() {}
+static void EditUserContact() {}
+static void ToggleUserActiveStatus() {}
 static void DeleteUser() {}
 
 static void ShowLoansMenu()
