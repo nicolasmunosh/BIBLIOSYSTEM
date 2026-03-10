@@ -363,10 +363,58 @@ static void DeleteUser()
 
 static void ShowLoansMenu()
 {
-    Console.Clear();
-    Console.WriteLine("Entrando al módulo de Préstamos...");
-    Console.ReadKey();
+  int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== MENÚ PRÉSTAMOS =====");
+        Console.WriteLine("1. Crear préstamo");
+        Console.WriteLine("2. Listar préstamos");
+        Console.WriteLine("3. Ver detalle del préstamo");
+        Console.WriteLine("4. Registrar devolución");
+        Console.WriteLine("5. Eliminar préstamo");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                CreateLoan();
+                break;
+
+            case 2:
+                ListLoansMenu();
+                break;
+
+            case 3:
+                ViewLoanDetail();
+                break;
+
+            case 4:
+                RegisterReturn();
+                break;
+
+            case 5:
+                DeleteLoan();
+                break;
+        }
+
+    } while(option != 0);
 }
+static void CreateLoan() {}
+
+static void ListLoansMenu() {}
+
+static void ViewLoanDetail() {}
+
+static void RegisterReturn() {}
+
+static void DeleteLoan() {}
 
 static void ShowSearchReportsMenu()
 {
