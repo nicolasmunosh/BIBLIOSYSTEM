@@ -652,7 +652,12 @@ static void SaveData()
     Console.WriteLine("Guardando datos del sistema...");
     Console.ReadKey();
     }
-static void LoadData() {}
+static void LoadData()
+    {
+    Console.Clear();
+    Console.WriteLine("Cargando datos del sistema...");
+    Console.ReadKey();
+    }
 static void ResetData() {}
 static void ConfirmResetData() {}
     static void ConfirmExitAndSave()
