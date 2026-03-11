@@ -678,13 +678,15 @@ static void ConfirmResetData()
     static void ConfirmExitAndSave()
 {
     Console.Clear();
+
+    Console.WriteLine("===== SALIR DEL SISTEMA =====");
     Console.WriteLine("¿Desea guardar antes de salir? (S/N)");
 
     string response = Console.ReadLine() ?? "";
 
     if(response.ToUpper() == "S")
     {
-        Console.WriteLine("Guardando datos...");
+        SaveData();
     }
 
     Console.WriteLine("Saliendo del sistema...");
