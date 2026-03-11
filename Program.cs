@@ -658,7 +658,11 @@ static void LoadData()
     Console.WriteLine("Cargando datos del sistema...");
     Console.ReadKey();
     }
-static void ResetData() {}
+static void ResetData()
+    {
+    Console.WriteLine("Reiniciando todos los datos del sistema...");
+    Console.ReadKey();
+    }
 static void ConfirmResetData()
 {
     Console.Clear();
