@@ -646,7 +646,12 @@ static void ShowPersistenceMenu()
 
     } while(option != 0);
 }
-static void SaveData() {}
+static void SaveData()
+    {
+    Console.Clear();
+    Console.WriteLine("Guardando datos del sistema...");
+    Console.ReadKey();
+    }
 static void LoadData() {}
 static void ResetData() {}
 static void ConfirmResetData() {}
