@@ -659,7 +659,18 @@ static void LoadData()
     Console.ReadKey();
     }
 static void ResetData() {}
-static void ConfirmResetData() {}
+static void ConfirmResetData()
+{
+    Console.Clear();
+    Console.WriteLine("¿Está seguro que desea reiniciar todos los datos? (S/N)");
+
+    string response = Console.ReadLine() ?? "";
+
+    if(response.ToUpper() == "S")
+    {
+        ResetData();
+    }
+}
     static void ConfirmExitAndSave()
 {
     Console.Clear();
