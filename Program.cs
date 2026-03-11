@@ -612,10 +612,44 @@ static void ReportSummary()
 }
 static void ShowPersistenceMenu()
 {
-    Console.Clear();
-    Console.WriteLine("Entrando a Guardar / Cargar datos...");
-    Console.ReadKey();
+
+    int option;
+
+    do
+    {
+        Console.Clear();
+
+        Console.WriteLine("===== GUARDAR / CARGAR DATOS =====");
+        Console.WriteLine("1. Guardar datos");
+        Console.WriteLine("2. Cargar datos");
+        Console.WriteLine("3. Reiniciar datos");
+        Console.WriteLine("0. Volver");
+
+        Console.Write("Seleccione una opción: ");
+
+        int.TryParse(Console.ReadLine(), out option);
+
+        switch(option)
+        {
+            case 1:
+                SaveData();
+                break;
+
+            case 2:
+                LoadData();
+                break;
+
+            case 3:
+                ConfirmResetData();
+                break;
+        }
+
+    } while(option != 0);
 }
+static void SaveData() {}
+static void LoadData() {}
+static void ResetData() {}
+static void ConfirmResetData() {}
     static void ConfirmExitAndSave()
 {
     Console.Clear();
