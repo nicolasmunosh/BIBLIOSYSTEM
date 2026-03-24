@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        ShowMainMenu();
+        TestObjects();
     }
 static List<Libro> libros = new List<Libro>();
 static void ShowMainMenu()
@@ -801,6 +801,42 @@ static void ConfirmResetData()
     }
 
     Console.WriteLine("Saliendo del sistema...");
+    Console.ReadKey();
+}
+static void TestObjects()
+{
+    Console.Clear();
+    Console.WriteLine("===== PRUEBAS DEL SISTEMA =====");
+
+    //  Libros
+    var libro1 = new Libro(1, "Cien años de soledad", "Gabriel García Márquez", true);
+    var libro2 = new Libro(2, "Don Quijote", "Miguel de Cervantes", true);
+
+    //  Usuarios
+    var usuario1 = new Usuario(1, "Juan", "juan@mail.com", true);
+    var usuario2 = new Usuario(2, "Ana", "ana@mail.com", true);
+
+    //  Préstamo
+    var prestamo = new Prestamo(1, libro1.Id, usuario1.Id);
+
+    // Mostrar info
+    Console.WriteLine("\n--- LIBROS ---");
+    Console.WriteLine(libro1.DetalleCompleto());
+    Console.WriteLine(libro2.DetalleCompleto());
+
+    Console.WriteLine("\n--- USUARIOS ---");
+    Console.WriteLine(usuario1.DetalleCompleto());
+    Console.WriteLine(usuario2.DetalleCompleto());
+
+    Console.WriteLine("\n--- PRÉSTAMO ---");
+    Console.WriteLine(prestamo.ToString());
+
+    // Validaciones
+    Console.WriteLine("\n--- VALIDACIONES ---");
+    Console.WriteLine($"Libro disponible: {libro1.Disponible}");
+    Console.WriteLine($"Usuario activo: {usuario1.Activo}");
+    Console.WriteLine($"Préstamo activo: {prestamo.Activo}");
+
     Console.ReadKey();
 }
 }

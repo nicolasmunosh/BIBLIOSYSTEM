@@ -22,6 +22,14 @@ namespace BiblioSystem.Models
             Disponible = true;
         }
 
+        public Libro(int id, string titulo, string autor, bool disponible)
+{
+    Id = id;
+    Titulo = titulo;
+    Autor = autor;
+    Disponible = disponible;
+}
+
         // Método corto
         public string ResumenCorto()
         {
