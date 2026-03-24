@@ -1,12 +1,13 @@
 ﻿using System;
-
+using BiblioSystem.Models;
+using System.Linq;
 class Program
 {
     static void Main(string[] args)
     {
         ShowMainMenu();
     }
-
+static List<Libro> libros = new List<Libro>();
 static void ShowMainMenu()
 {
     int option;
@@ -106,13 +107,28 @@ static void ShowBooksMenu()
         }
 
     } while(option != 0);
-}static void RegisterBook()
-    {
+}
+static void RegisterBook()
+{
     Console.Clear();
     Console.WriteLine("===== REGISTRAR LIBRO =====");
-    Console.WriteLine("Función para registrar un nuevo libro.");
+
+    Libro nuevo = new Libro();
+
+    Console.Write("Ingrese el título: ");
+    nuevo.Titulo = Console.ReadLine() ?? "";
+
+    Console.Write("Ingrese el autor: ");
+    nuevo.Autor = Console.ReadLine() ?? "";
+
+    nuevo.Id = libros.Count + 1;
+    nuevo.Disponible = true;
+
+    libros.Add(nuevo);
+
+    Console.WriteLine("Libro registrado correctamente ");
     Console.ReadKey();
-    }
+}
 
 static void ListBooksMenu()
 {
@@ -151,7 +167,25 @@ static void ListBooksMenu()
 }
 static void ListBooksAll()
 {
-    Console.WriteLine("Mostrando todos los libros...");
+    Console.Clear();
+    Console.WriteLine("===== LISTA DE LIBROS =====");
+
+    if (libros.Count == 0)
+    {
+        Console.WriteLine("No hay libros registrados.");
+    }
+    else
+    {
+        foreach (var libro in libros)
+        {
+            Console.WriteLine($"ID: {libro.Id}");
+            Console.WriteLine($"Título: {libro.Titulo}");
+            Console.WriteLine($"Autor: {libro.Autor}");
+            Console.WriteLine($"Disponible: {(libro.Disponible ? "Sí" : "No")}");
+            Console.WriteLine("---------------------------");
+        }
+    }
+
     Console.ReadKey();
 }
 
@@ -211,13 +245,67 @@ static void UpdateBookMenu()
     }
 static void EditBookTitle()
 {
-    Console.WriteLine("Editar título del libro...");
+    Console.Clear();
+    Console.WriteLine("===== EDITAR TÍTULO =====");
+
+    if (libros.Count == 0)
+    {
+        Console.WriteLine("No hay libros registrados.");
+        Console.ReadKey();
+        return;
+    }
+
+    Console.Write("Ingrese el ID del libro: ");
+    int id;
+    int.TryParse(Console.ReadLine(), out id);
+
+    var libro = libros.FirstOrDefault(l => l.Id == id);
+
+    if (libro == null)
+    {
+        Console.WriteLine("Libro no encontrado.");
+    }
+    else
+    {
+        Console.Write("Nuevo título: ");
+        libro.Titulo = Console.ReadLine() ?? "";
+
+        Console.WriteLine("Título actualizado ");
+    }
+
     Console.ReadKey();
 }
 
 static void EditBookAuthor()
 {
-    Console.WriteLine("Editar autor del libro...");
+    Console.Clear();
+    Console.WriteLine("===== EDITAR AUTOR =====");
+
+    if (libros.Count == 0)
+    {
+        Console.WriteLine("No hay libros registrados.");
+        Console.ReadKey();
+        return;
+    }
+
+    Console.Write("Ingrese el ID del libro: ");
+    int id;
+    int.TryParse(Console.ReadLine(), out id);
+
+    var libro = libros.FirstOrDefault(l => l.Id == id);
+
+    if (libro == null)
+    {
+        Console.WriteLine("Libro no encontrado.");
+    }
+    else
+    {
+        Console.Write("Nuevo autor: ");
+        libro.Autor = Console.ReadLine() ?? "";
+
+        Console.WriteLine("Autor actualizado ");
+    }
+
     Console.ReadKey();
 }
 
@@ -228,12 +316,35 @@ static void EditBookYearCategory()
 }
 
 static void DeleteBook()
-    {
+{
     Console.Clear();
-    Console.WriteLine("Eliminar libro seleccionado.");
-    Console.WriteLine("Validar no permitir si el libro está prestado.");
-    Console.ReadKey();
+    Console.WriteLine("===== ELIMINAR LIBRO =====");
+
+    if (libros.Count == 0)
+    {
+        Console.WriteLine("No hay libros para eliminar.");
+        Console.ReadKey();
+        return;
     }
+
+    Console.Write("Ingrese el ID del libro a eliminar: ");
+    int id;
+    int.TryParse(Console.ReadLine(), out id);
+
+    var libro = libros.FirstOrDefault(l => l.Id == id);
+
+    if (libro == null)
+    {
+        Console.WriteLine("Libro no encontrado.");
+    }
+    else
+    {
+        libros.Remove(libro);
+        Console.WriteLine("Libro eliminado correctamente ");
+    }
+
+    Console.ReadKey();
+}
 
 static void ShowUsersMenu()
 {
