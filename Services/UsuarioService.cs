@@ -44,5 +44,21 @@ namespace BiblioSystem.Services
         {
             return usuarios.OrderBy(u => u.Nombre).ToList();
         }
+
+        // KPIs
+public int TotalUsuarios()
+{
+    return usuarios.Count;
+}
+
+public int UsuariosActivos()
+{
+    return usuarios.Count(u => u.Activo);
+}
+
+public int UsuariosInactivos()
+{
+    return usuarios.Count(u => !u.Activo);
+}
     }
 }
