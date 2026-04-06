@@ -73,7 +73,7 @@ static void ShowMainMenu()
                 break;
         }
 
-    } while (option != 6);
+    } while (option != 8);
 }
 
 static void ShowBooksMenu()
