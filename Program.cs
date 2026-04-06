@@ -1,5 +1,6 @@
 ﻿using System;
 using BiblioSystem.Models;
+using BiblioSystem.Services;
 using System.Linq;
 class Program
 {
@@ -22,7 +23,9 @@ static void ShowMainMenu()
         Console.WriteLine("3. Préstamos");
         Console.WriteLine("4. Búsquedas y reportes");
         Console.WriteLine("5. Guardar / Cargar datos");
-        Console.WriteLine("6. Salir");
+        Console.WriteLine("6. Prueba Services");
+        Console.WriteLine("7. Comparar Array vs List");
+        Console.WriteLine("8. Salir");
 
         Console.Write("Seleccione una opción: ");
 
@@ -51,6 +54,14 @@ static void ShowMainMenu()
                 break;
 
             case 6:
+                TestServices();
+                break;
+
+            case 7:
+                CompararArrayVsList();
+                break;
+
+            case 8:
                 ConfirmExitAndSave();
                 break;
 
@@ -836,6 +847,47 @@ static void TestObjects()
     Console.WriteLine($"Libro disponible: {libro1.Disponible}");
     Console.WriteLine($"Usuario activo: {usuario1.Activo}");
     Console.WriteLine($"Préstamo activo: {prestamo.Activo}");
+
+    Console.ReadKey();
+}
+static void TestServices()
+{
+    Console.Clear();
+    Console.WriteLine("===== PRUEBA SERVICES =====");
+
+    var libroService = new LibroService();
+
+    libroService.AgregarLibro(new Libro(1, "Libro prueba", "Autor"));
+    libroService.AgregarLibro(new Libro(2, "Otro libro", "Autor 2"));
+
+    Console.WriteLine("Total libros: " + libroService.TotalLibros());
+
+    Console.ReadKey();
+}
+
+static void CompararArrayVsList()
+{
+    Console.Clear();
+    Console.WriteLine("===== ARRAY VS LIST =====");
+
+    int[] numerosArray = new int[3] { 10, 20, 30 };
+
+    Console.WriteLine("Array:");
+    foreach (var n in numerosArray)
+    {
+        Console.WriteLine(n);
+    }
+
+    List<int> numerosList = new List<int> { 10, 20, 30 };
+
+    Console.WriteLine("List:");
+    foreach (var n in numerosList)
+    {
+        Console.WriteLine(n);
+    }
+
+    Console.WriteLine("\nArray: tamaño fijo");
+    Console.WriteLine("List: tamaño dinámico");
 
     Console.ReadKey();
 }
