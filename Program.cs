@@ -7,6 +7,8 @@ class Program
     static void Main(string[] args)
     {
         TestObjects();
+        TestServices();
+        CompararArrayVsList();
     }
 static List<Libro> libros = new List<Libro>();
 static void ShowMainMenu()
