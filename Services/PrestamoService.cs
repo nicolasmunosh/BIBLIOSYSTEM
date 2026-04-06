@@ -52,5 +52,21 @@ namespace BiblioSystem.Services
         {
             return prestamos.OrderBy(p => p.FechaPrestamo).ToList();
         }
+
+        // KPIs
+public int TotalPrestamos()
+{
+    return prestamos.Count;
+}
+
+public int PrestamosActivos()
+{
+    return prestamos.Count(p => p.Activo);
+}
+
+public int PrestamosInactivos()
+{
+    return prestamos.Count(p => !p.Activo);
+}
     }
 }
