@@ -44,5 +44,21 @@ namespace BiblioSystem.Services
         {
             return libros.OrderBy(l => l.Titulo).ToList();
         }
+
+        // KPIs
+public int TotalLibros()
+{
+    return libros.Count;
+}
+
+public int LibrosDisponibles()
+{
+    return libros.Count(l => l.Disponible);
+}
+
+public int LibrosPrestados()
+{
+    return libros.Count(l => !l.Disponible);
+}
     }
 }
