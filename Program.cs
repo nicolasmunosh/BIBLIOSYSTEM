@@ -861,6 +861,10 @@ static void TestServices()
     libroService.AgregarLibro(new Libro(2, "Otro libro", "Autor 2"));
 
     Console.WriteLine("Total libros: " + libroService.TotalLibros());
+    Console.WriteLine("\n===== KPI LIBROS =====");
+    Console.WriteLine("Total: " + libroService.TotalLibros());
+    Console.WriteLine("Disponibles: " + libroService.LibrosDisponibles());
+    Console.WriteLine("Prestados: " + libroService.LibrosPrestados());
 
     Console.ReadKey();
 }
