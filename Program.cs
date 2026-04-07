@@ -17,6 +17,10 @@ class Program
 
     static void Main(string[] args)
     {
+<<<<<<< HEAD
+=======
+        LoadData();
+>>>>>>> develop
         ShowMainMenu();
     }
 
@@ -937,4 +941,8 @@ class Program
         Console.WriteLine("List  : tamaño dinámico, permite Add/Remove fácilmente.");
         Console.ReadKey();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop
