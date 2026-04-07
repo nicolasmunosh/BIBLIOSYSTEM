@@ -938,8 +938,4 @@ class Program
         Console.WriteLine("List  : tamaño dinámico, permite Add/Remove fácilmente.");
         Console.ReadKey();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> develop
